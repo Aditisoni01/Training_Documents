@@ -1983,3 +1983,88 @@ Java Maven Web Application :
 	
 	pom.xml 
 
+
+
+#######################
+Day 6 - 13th Aug. 2023
+#######################
+
+		Jenkins - Build Trigger!!!!
+		
+		Jenkins ==> CI/CD 
+		
+			Build Periodic ::
+				==> Used to automate the build based on schedule.
+					Irrespective of src_code Changes.
+			
+			Poll SCM ::
+				==> It is same as build trigger. 
+					But, It triggers the job only if there is any change in src_code Repository.
+					It will not trigger the job for every commit. Instead, it will trigger the job based on schedule.
+					
+					
+					Test-Cycle :::
+					
+						Test_Job --> To perform automated testing :::
+						8AM		--> Start -->
+						12Noon
+						3PM
+						
+			
+			Github webhook ::
+				==> It trigger the build job, as soon as the src_code repository is updated with any commit/push.
+					For every commit/push in the src_code Repo. the build will be triggered.
+			
+				payload URL : http://<Jenkins_Master_Public_IP_Addr:8080/github-webhook/
+			
+							http://13.234.115.121:8080/github-webhook/
+			
+			
+Email Notifications :::::
+
+
+Email Notification Plugins :::
+
+SMTP Server :
+smtp.gmail.com
+
+SMTP Authentication
+
+SMTP Port :: 465
+
+Login to Gmail :::
+
+Click Account Settings
+
+select Security 
+
+MFA --> mobile#
+App Password = 16
+What ? window
+Which Appln - email
+
+		
+			
+		Non-Prod Servers :::						Prod Servers :::
+		
+		
+			Dev
+			QA 
+			UAT 		
+		
+
+CICD Pipeline ::::
+
+		SCM-Checkout 
+		Build 
+		Deployed to QA 
+		
+		
+Jenkins - 	Backup & Recovery!
+			Upgrade 
+				Jenkins
+				Plugins 
+				Server_Upgrade
+			Active and Passive Servers.
+			
+
