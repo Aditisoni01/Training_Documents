@@ -162,4 +162,145 @@
 		Unique ip address will be assign to any pod when it gets created. 
 		
 		Pod Life Cycle ::::
+				
+#######################
+Day 8 - 20th Aug. 2023
+#######################		
+
+		Installation & config of K8s Cluster using kubeadm :::
 		
+			- Configuration of Kubernetes / K8s
+			
+		- Create Pods :::
+		
+			Manifest file == *.yaml 
+			
+				
+		- How to create kubernetes services 
+			- ClusterIP
+			- NodePort 
+			- Load Balancer
+		
+		- Replication 
+		- How to work with Kubernetes Deployment Object 
+		- rollback/upgrade/scale up / scale down 
+		
+		- namespace
+		
+		
+		3 - Tier Application 
+		
+		
+		
+		
+		
+		
+			Front-End 	-- Pod 
+			
+			
+			
+			
+			Application_Logic		-- Pod 
+			
+			
+			
+			
+			
+			Back-End 	-- Pod 
+			
+			
+			
+		Deployment Controller Object :
+		
+		 replicas 3
+		 distribute in all the available nodes as possible
+		 update/rollback without downtime 
+		 scale up / scale down 
+		 
+		 
+		mywebappv1.
+		
+		pod1 ==> 
+		
+		pod1.1
+		pod1.2
+		pod1.3
+		
+		
+		100 -- users 
+		
+		10000 -- users 
+		
+		pod1.1
+		pod1.2		1.7.9 
+		pod1.3
+		pod1.100
+		
+		
+		upgrade --: mywebappv1.  mywebappv2.
+		
+		Deployment Strategy :::
+		
+			rolling update strategy ==> Default deployment strategy in kubernetes 
+			
+			
+			Describe ==> ETCD --> single point of source --> node,pods,all kubernetes resources & Objects
+			
+			kubectl set image deploy nginx-deploy nginx-container=nginx:1.9.1
+				
+			scale up -- 
+			
+			
+			kubectl get pods --all-namespaces 
+			
+			/etc ==>
+			
+			ETCD 
+			
+		Jenkins CICD Pipeline :::
+		
+		
+		SCM-Checkout --> Build --> Deploy to QA_Server(VM) --> Deploy to UAT_Server(VM) --> Deploy to PROD_Server(VM1,2,3)
+		
+		
+		For Containerized Application ::
+		
+		SCM-Checkout --> Build --> Docker Build (Dockerfile) --> Publish to Dockerhub --> Deploy to Kubernetes_Cluster 
+		
+		
+		Non-Prod :
+		Kubernetes_Master ===> WN1,2,3,4,5,6
+			
+			dev environment namespaces 
+			qa  environment namespaces 
+			
+		Prod :
+		Kubernetes_Master ===> WN1,2,3,4,5,6
+		
+		NameSpaces ::::
+		
+			Namespace --> Is a logical partitioning of Kubernetes Cluster.
+			
+			Based on Environments / Teams I can create he Namespace 
+			
+			QA_Namespace 
+			UAT_Namespace 
+			
+		Deployments / Migration / Releases 
+
+
+
+			Deployed one Application --> Prod_Envi(ns-ACTIVE)(Green). in Kubernetes_Prod_Cluster 
+			
+			Huge Release Application --> PROD-ENVI(NS-PASSIVE)(BLUE)
+			
+				Blue / Green Deployment Strategy ==> 
+				
+						This can be easily achieved using Kubernetes Namespaces ::::
+						
+						
+				Production Server
+					Active 			LIVE 
+					
+					
+					Passive Server  -- Introduce the new version -- > Thorough testing -->  		
