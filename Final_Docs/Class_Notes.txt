@@ -2808,9 +2808,9 @@ Infra-structure Provisioning :::
 				
 			Create Access Key & Secret Keys in AWS Console.
 			
-			AKIAZGTTTJV4IZNSLBVX
+			AKIX
 			
-			Gv3KVM3B5iwY9RTa5cksceP1/Z+SH/hD545F8WJE
+			G8WJE
 			
 			
 			Using Terraform :::
@@ -2823,8 +2823,8 @@ Infra-structure Provisioning :::
 			
 provider "aws" {
   region     = "ap-south-1"
-  access_key = "AKIAZGTTTJV4IZNSLBVX"
-  secret_key = "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"
+  access_key = "AKX"
+  secret_key = "GvJE"
 }
 
 # Create AWS Instance
@@ -3015,8 +3015,8 @@ Day 9 - 26th Aug. 2023
 		
 		4.  Configuration of Credentials in Jenkins Master 
 		
-			docker login -u loksaieta
-			dckr_pat_L2zX2aMjpVyOQDBIZcK6F1HXBDU
+			docker login -u lokta
+			dHXBDU
 		
 		5.  Configuration of Tools in Jenkins Master 
 			
